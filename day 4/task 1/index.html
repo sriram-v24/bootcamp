@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Content</title>
+    <style>
+        .section {
+            display: none; /* Initially hide sections */
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        button, a {
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Show/Hide Sections</h1>
+
+    <button onclick="toggleSection('section1')">Toggle Section 1</button>
+    <a href="#" onclick="toggleSection('section2'); return false;">Toggle Section 2</a>
+    <button onclick="toggleSection('section3')">Toggle Section 3</button>
+
+    <div id="section1" class="section">
+        <h2>Full Stack Developer</h2>
+        <p>Full stack developer content includes knowledge of front-end and back-end technologies, programming languages, and tools.</p>
+    </div>
+
+    <div id="section2" class="section">
+        <h2> Front end Developer</h2>
+        <p>A  front-end developer designs and builds websites and web applications. They are responsible for the look and feel of a website, while back-end developers are responsible for how it works.</p>
+    </div>
+
+    <div id="section3" class="section">
+        <h2>Back End Developer</h2>
+        <p>A back-end developer creates and maintains the technology that powers a website or application's server-side. They work behind the scenes to ensure the website functions properly.</p>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
